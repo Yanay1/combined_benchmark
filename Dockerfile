@@ -4,8 +4,8 @@ FROM r-base
 
 ## INSTALL SEURAT ##
 ADD install.R /software/scripts/install.R
-ADD cluster.R /software/scripts/cluster.R
-ADD cluster.py /software/scripts/cluster.py
+ADD seurat_benchmark.R /software/scripts/seurat_benchmark.R
+ADD scanpy_benchmark.py /software/scripts/scanpy_benchmark.py
 
 ENV PATH "$PATH:/software/scripts"
 

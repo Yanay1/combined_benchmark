@@ -20,7 +20,7 @@ if (length(args)==0) {
 start <- Sys.time()
 
 # Load the Neuron dataset
-print("RReading, making names unique and filtering:")
+print("Reading, making names unique and filtering:")
 now <- Sys.time()
 neuron.data <- Read10X_h5(filename)
 rownames(neuron.data) <- make.names(neuron.data[,1], unique = TRUE)

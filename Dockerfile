@@ -73,5 +73,6 @@ ADD 1M_neurons_matrix_subsampled_500K.h5 /home/1M_neurons_matrix_subsampled_500K
 ADD 1M_neurons_matrix_subsampled_250K.h5 /home/1M_neurons_matrix_subsampled_250K.h5
 ADD 1M_neurons_matrix_subsampled_100K.h5 /home/1M_neurons_matrix_subsampled_100K.h5
 ADD 1M_neurons_matrix_subsampled_25K.h5 /home/1M_neurons_matrix_subsampled_25K.h5
+ADD 1M_neurons_filtered_gene_bc_matrices_h5.h5 /home/1M_neurons_filtered_gene_bc_matrices_h5.h5
 
 CMD ["bash"]

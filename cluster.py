@@ -55,7 +55,7 @@ print("Scaling Data Time:", datetime.datetime.now() - now)
 print("Running PCA")
 now = datetime.datetime.now()
 sc.tl.pca(adata, svd_solver='arpack')
-print("Running PCA Time:", datetime.datetime.now() - now)
+print("Running PCA Time:", datdetime.datetime.now() - now)
 
 print("Finding Neighbors")
 now = datetime.datetime.now()

@@ -75,4 +75,8 @@ ADD 1M_neurons_matrix_subsampled_100K.h5 /home/1M_neurons_matrix_subsampled_100K
 ADD 1M_neurons_matrix_subsampled_25K.h5 /home/1M_neurons_matrix_subsampled_25K.h5
 ADD 1M_neurons_filtered_gene_bc_matrices_h5.h5 /home/1M_neurons_filtered_gene_bc_matrices_h5.h5
 
+ADD subsample.py software/scripts/subsample.py
+
+RUN chmod -R a+x /software/scripts
+
 CMD ["bash"]

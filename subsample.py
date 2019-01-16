@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 import collections
 import matplotlib
 import matplotlib.pyplot as plt
@@ -5,6 +6,19 @@ import numpy as np
 import pandas as pd
 import scipy.sparse as sp_sparse
 import tables
+import sys
+
+genome = "mm10"
+
+try:
+    print(sys.argv)
+    filtered_matrix_h5 = sys.argv[1]
+    filename = sys.argv[2]
+    subsample_bcs = int(sys.argv[3])
+    if len(sys.argv) == 5:
+        genome = sys.argv[4]
+except:
+    print("Wrong Arguments")
 
 
 np.random.seed(0)
@@ -50,12 +64,10 @@ def get_expression(gbm, gene_name):
     return gbm.matrix[gene_indices[0], :].toarray().squeeze()
 
 
-filtered_matrix_h5 = "1M_neurons_filtered_gene_bc_matrices_h5.h5"
-genome = "mm10"
 gene_bc_matrix = get_matrix_from_h5(filtered_matrix_h5, genome)
 
-subsample_bcs = 25000
+
 subset = np.sort(np.random.choice(gene_bc_matrix.barcodes.size, size=subsample_bcs, replace=False))
 subsampled_matrix = subsample_matrix(gene_bc_matrix, subset)
 
-save_matrix_to_h5(subsampled_matrix, "1M_neurons_matrix_subsampled_25K.h5", "mm10")
+save_matrix_to_h5(subsampled_matrix, filename, genome)

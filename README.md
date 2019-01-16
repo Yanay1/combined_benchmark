@@ -74,5 +74,7 @@ To create more subsamples
 | View the Final object | neuron  | adata |
 
 At the start of each step, the step name will be printed.
+
 At the end of each step, the time it took will be printed.
+
 At the end of the benchmark a summary of the final object and the total benchmark time will be printed.

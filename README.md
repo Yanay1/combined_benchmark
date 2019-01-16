@@ -42,18 +42,22 @@ This docker container has R 3.5.2, Python 3.6.5, Seurat 3.0 prerelease and Scanp
 To use the image in google cloud VM make sure to add yanay/combined_benchmark as the container when creating the VM.
 
 First, start the docker container
+
     # In the ssh window of the VM or locally
     docker run -it yanay/combined_benchmark bash
 
 To benchmark Seurat
+
     seurat_benchmark.R input_h5 optional_verbose_setting
     # verbose setting true or false (display loading bar during steps)
 
 To Benchmark Scanpy
+
     scanpy_benchmark.py input_h5 optional_verbose_setting
     # verbose options 0, 1, 2, 3: errors (0), warnings (1), info (2), hints (3)
 
 To create more subsamples
+
     subsample.py input_file.h5 output_file.h5 cells_to_subsample_to (optional genome arg)
 
 ## The Benchmark

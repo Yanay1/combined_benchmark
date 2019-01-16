@@ -8,6 +8,7 @@ This docker container has R 3.5.2, Python 3.6.5, Seurat 3.0 prerelease and Scanp
 ## Build Instructions
 *Note: this repo does not contain the h5 files added in this docker image*
 *To build this image you need to generate them, or just remove the lines where they are added to the dockerfile*
+
     cd .../combined_benchmark
     chmod a+x subsample.py # make this file executable locally
     # To download the 1.3 million neurons and subsample (this can be done locally)
@@ -17,6 +18,7 @@ This docker container has R 3.5.2, Python 3.6.5, Seurat 3.0 prerelease and Scanp
     subsample.py 1M_neurons_filtered_gene_bc_matrices_h5.h5 1M_neurons_matrix_subsampled_1M.h5 1000000 mm10
 
 **If you don't want to add these quite large files to your version**
+
     # remove these lines from the docker file
     ADD 1M_neurons_matrix_subsampled_1M.h5 /home/1M_neurons_matrix_subsampled_1M.h5
     ADD 1M_neurons_matrix_subsampled_500K.h5 /home/1M_neurons_matrix_subsampled_500K.h5
@@ -68,7 +70,5 @@ To create more subsamples
 | View the Final object | neuron  | adata |
 
 At the start of each step, the step name will be printed.
-
 At the end of each step, the time it took will be printed.
-
 At the end of the benchmark a summary of the final object and the total benchmark time will be printed.

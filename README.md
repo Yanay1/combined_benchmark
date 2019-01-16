@@ -5,7 +5,7 @@
 
 This docker container has R 3.5.2, Python 3.6.5, Seurat 3.0 prerelease and Scanpy 1.3.7 (Latest version), scCloud 0.8 as well as a number of other libraries such as igraph, louvain and umap-learn.
 
-## Build Instructions
+# Build Instructions
 *Note: this repo does not contain the h5 files added in this docker image*
 *To build this image you need to generate them, or just remove the lines where they are added to the dockerfile*
 
@@ -38,7 +38,7 @@ This docker container has R 3.5.2, Python 3.6.5, Seurat 3.0 prerelease and Scanp
     # after building
     bash push_docker
 
-## Usage
+# Usage
 To use the image in google cloud VM make sure to add yanay/combined_benchmark as the container when creating the VM.
 
 First, start the docker container

@@ -3,7 +3,7 @@
 *Build directory for yanay/combined_benchmark docker image, hosted publicly on docker hub*
 
 
-This docker container has R 3.5.2, Python 3.6.5, Seurat 3.0 prerelease and Scanpy 1.3.7 (Latest version), scCloud 0.8 as well as a number of other libraries such as igraph, louvain and umap-learn.
+This docker container has R 3.5.2, Python 3.6.5, Seurat 3.0 prerelease, Scanpy 1.3.7 (Latest version), scCloud 0.8 as well as a number of other libraries such as igraph, louvain and umap-learn.
 
 # Build Instructions
 *Note: this repo does not contain the h5 files added in this docker image*
@@ -78,3 +78,5 @@ At the start of each step, the step name will be printed.
 At the end of each step, the time it took will be printed.
 
 At the end of the benchmark a summary of the final object and the total benchmark time will be printed.
+
+[ Benchmark Results ](https://docs.google.com/spreadsheets/d/1RA_xDpU2-BnXoRUJ5hrNTD0MdbuweP5_emW1H0sjcOA/edit?usp=sharing)
